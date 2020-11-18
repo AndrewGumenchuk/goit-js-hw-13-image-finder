@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+
+  width: 20%;
+  min-width: 200px;
+  padding: 8px;
+
+  border-color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.6);
+
+  font-size: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.load-more-button {
+  position: fixed;
+  left: 50%;
+  bottom: 48px;
+  transform: translateX(-50%);
+
+  width: fit-content;
+  padding: 8px;
+
+  border-color: rgb(154, 230, 179);
+  background-color: rgba(129, 189, 127, 0.9);
+  border-radius: 6px;
+  color: #ffffff;
+
+  font-size: 14px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+}
+
+p {
+  margin: 0;
+}
+
+.gallery__item img {
+  display: block;
+  width: 100%;
+  height: calc((100vh - 138px) / 3);
+  object-fit: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.gallery__item {
+  width: calc((100% - 64px) / 4);
+  height: calc((100vh - 48px) / 3);
+  overflow: hidden;
+}
+
+.gallery__item:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 16px;
+}
+
+.gallery__item:hover {
+  transform: scale(1.02);
+  color: rgb(200, 132, 240);
+  z-index: 1;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+}
+
+.material-icons {
+  margin-right: 6px;
+}
+
+.photo-card img {
+  margin-bottom: 6px;
+}
